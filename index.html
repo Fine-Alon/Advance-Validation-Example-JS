@@ -8,23 +8,24 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="./main.js"></script>
+    <script defer src="./main.js"></script>
 </head>
 <body>
 <div class="container p-3">
     <form id="form" class="py-3" style="width: 30%">
-        <input type="email" class="form-control mb-3" placeholder="email" aria-describedby="emailHelp">
-        <input type="text" class="form-control mb-3" placeholder="name">
-        <select class="form-select mb-3" >
-            <option selected >gender</option>
-            <option value="1">male</option>
-            <option value="2">female</option>
+        <input type="email" name="email" class="form-control mb-3" placeholder="email" aria-describedby="emailHelp">
+        <input type="text" name="name" class="form-control mb-3" placeholder="name">
+        <select name="gender" class="form-select mb-3" >
+            <option value="" selected >gender</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
         </select>
-        <select class="form-select mb-3" >
-            <option selected>status</option>
-            <option value="1">active</option>
-            <option value="2">inactive</option>
+        <select name="status" class="form-select mb-3" >
+            <option value="" selected>status</option>
+            <option value="active">active</option>
+            <option value="inactive">inactive</option>
         </select>
+        <div class="errors text-danger mb-3"></div>
         <button type="submit" class="btn btn-primary">
 <!--            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>-->
             <span role="status">Submit</span>
